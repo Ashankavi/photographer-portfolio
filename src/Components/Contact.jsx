@@ -64,7 +64,7 @@ const Contact = () => {
 
 
       <p className=" text-[30px] -ml-[200px] font-semibold text-white hover:text-[#89592a]">Contact info</p>
-        <p className=" text-[20px] mt-[10px] ml-[120px] text-[#ffffff] px-20 "> ipsum dolor sit amet, consectetur adipiscing elit. ligula nulla  tincidunt id faucibus sed suscipit feugiat.</p>
+        <p className=" text-[20px] mt-[10px]  text-[#ffffff] px-20 "> ipsum dolor sit amet, consectetur adipiscing elit. ligula nulla  tincidunt id faucibus sed suscipit feugiat.</p>
 
         <div className="w-full max-w-md p-6 bg-[#e093ff00] rounded-lg  max-auto ">
         <img className=" w-[90px] my-[20px] " src={Email}/>       
@@ -84,7 +84,7 @@ const Contact = () => {
         </div>
 
         <div className="">
-        <p className="text-[20px] font-semibold text-[#ffffff] mb-[15px]">Visit my social profile and get connected</p>
+        <p className="text-[20px] font-semibold px-8 text-[#ffffff] mb-[15px]">Visit my social profile and get connected</p>
         <img className="hover:shadow-xl w-[70px] float-left mx-2" src={LinkD}/>     
         <img className="hover:shadow-xl w-[70px] float-left mx-2" src={FB}/> 
         <img className="hover:shadow-xl w-[70px] float-left" src={Insta}/> 
