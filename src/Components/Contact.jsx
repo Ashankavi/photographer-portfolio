@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { motion } from "framer-motion"
 
 import ContactBack from '../Assets/Contact/ContactBach.jpg'
 
@@ -23,7 +23,11 @@ const Contact = () => {
     
       <h2 className="pt-20 pl-20 text-3xl font-bold text-white uppercase font-sevillana  hover:text-[#f7bb7e]">Contact</h2>
     <div className='flex flex-row flex-wrap'>
-    <div className='flex flex-col grow h-[100vh] w-[500px] items-center justify-center '>
+    <motion.div 
+          whileInView={{opacity: 1, x:0}}
+          initial={{ opacity: 0, x: -100}}
+          transition={{duration:0.5}} 
+           className='flex flex-col grow h-[100vh] w-[500px] items-center justify-center '>
 
       <div>
 
@@ -58,9 +62,12 @@ const Contact = () => {
         </form>
         </div>
 
-      </div>
+      </motion.div>
 
-      <div className='flex flex-col grow h-[100vh] w-[500px] items-center justify-center font-sevillana tracking-wider'>
+      <motion.div 
+          whileInView={{opacity: 1, x:0}}
+          initial={{ opacity: 0, x: 100}}
+          transition={{duration:0.5}}  className='flex flex-col grow h-[100vh] w-[500px] items-center justify-center font-sevillana tracking-wider'>
 
 
       <p className=" text-[30px] -ml-[200px] font-semibold text-white hover:text-[#89592a]">Contact info</p>
@@ -89,7 +96,7 @@ const Contact = () => {
         <img className="hover:shadow-xl w-[70px] float-left mx-2" src={FB}/> 
         <img className="hover:shadow-xl w-[70px] float-left" src={Insta}/> 
        </div>
-      </div>
+      </motion.div>
       
       </div>
     </div>

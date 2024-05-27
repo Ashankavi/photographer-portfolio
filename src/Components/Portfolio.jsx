@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from "framer-motion"
 
 import BackIMG from '../Assets/Portfolio/portfolioBck2.png'
 import Bdate from '../Assets/Portfolio/birthdayIMG.jpg'
@@ -16,7 +17,12 @@ const Portfolio = () => {
 <div class="flex min-h-auto items-center bg-cover justify-center bg-neutral-800" style={{backgroundImage: `url(${BackIMG})`}}>
 
   <div class="grid grid-cols-1 gap-8 md:grid-cols-3 lg:grid-cols-4 p-20">
-    <div class="group relative cursor-pointer  rounded-[20px] items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+
+    <motion.div
+          whileInView={{opacity: 1, y:0}}
+          initial={{ opacity: 0, y: -100}}
+          transition={{duration:0.5}}     
+    class="group relative cursor-pointer  rounded-[20px] items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
       <div class="h-[500px] w-72">
         <img class="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125" src={Wedding} alt="" />
       </div>
@@ -28,8 +34,13 @@ const Portfolio = () => {
             See More
         </button>
       </div>
-    </div>
-    <div class="group relative cursor-pointer items-center justify-center rounded-[20px] overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+    </motion.div>
+
+    <motion.div
+          whileInView={{opacity: 1, y:0}}
+          initial={{ opacity: 0, y: 100}}
+          transition={{duration:0.5}}   
+           class="group relative cursor-pointer items-center justify-center rounded-[20px] overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
     <div class="h-[500px] w-72">
         <img class="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125" src={LoveStory} alt="" />
       </div>
@@ -41,8 +52,13 @@ const Portfolio = () => {
         See More
         </button>
       </div>
-    </div>
-    <div class="group relative cursor-pointer items-center justify-center rounded-[20px] overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+    </motion.div>
+
+    <motion.div
+          whileInView={{opacity: 1, y:0}}
+          initial={{ opacity: 0, y: -100}}
+          transition={{duration:0.5}} 
+           class="group relative cursor-pointer items-center justify-center rounded-[20px] overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
     <div class="h-[500px] w-72">
         <img class="h-full w-full object-cover transition-transform  duration-500 group-hover:rotate-3 group-hover:scale-125" src={Bdate} alt="" />
       </div>
@@ -54,8 +70,14 @@ const Portfolio = () => {
         See More
         </button>
       </div>
-    </div>
-    <div class="group relative cursor-pointer items-center justify-center rounded-[20px] overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+    </motion.div>
+
+    <motion.div
+          whileInView={{opacity: 1, y:0}}
+          initial={{ opacity: 0, y: 100}}
+          transition={{duration:0.5}} 
+          
+          class="group relative cursor-pointer items-center justify-center rounded-[20px] overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
     <div class="h-[500px] w-72">
         <img class="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125" src={Events} alt="" />
       </div>
@@ -67,7 +89,7 @@ const Portfolio = () => {
         See More
         </button>
       </div>
-    </div>
+    </motion.div>
   </div>
   
 </div>

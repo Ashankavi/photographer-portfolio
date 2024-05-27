@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from "framer-motion"
 
 import BackIMG from '../Assets/About/3.jpg'
 import BackIMG1 from '../Assets//About/IMGs Slide.png'
@@ -16,7 +17,7 @@ const About = () => {
   };
 
   return (
-    <div className="grid w-full h-full bg-cover md:grid-cols-2" style={{backgroundImage: `url(${BackIMG})`}}>
+    <div className="grid w-full h-full bg-cover md:grid-cols-2 bg-fixed" style={{backgroundImage: `url(${BackIMG})`}}>
      
       <div className='flex flex-col grow'>
       <div className="">
@@ -28,9 +29,18 @@ const About = () => {
         
         <div className="text-white ">
           <div className="p-20" >
-            <div>
-          <h2 className="mb-4 text-3xl font-bold uppercase font-sevillana hover:text-[#89592a]">About</h2>
-          <div className='text-xl text-justify font-sevillana'>
+            <motion.div className=''
+          whileInView={{opacity: 1, x:0}}
+          initial={{ opacity: 0, x: 100}}
+          transition={{duration:0.5}}             
+            >
+
+          <h2
+         
+          className="mb-4 text-3xl font-bold uppercase font-sevillana hover:text-[#89592a]">About</h2>
+
+          <div           
+          className='text-xl text-justify font-sevillana'>
           <p className="mb-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut brlabore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
@@ -45,11 +55,15 @@ const About = () => {
           </p>
           </div>
           
-          </div>
+          </motion.div>
                   
-          <button onClick={handleClick} className=" hover:text-[#f7bb7e] border-[#65401d]  hover:border-[#f7bb7e] border-2 p-20 px-6 py-2 mt-4 font-bold text-white uppercase bg-black ">
+          <motion.button
+          whileInView={{opacity: 1, x:0}}
+          initial={{ opacity: 0, x: 100}}
+          transition={{duration:0.5}}          
+          onClick={handleClick} className=" hover:text-[#f7bb7e] border-[#65401d]  hover:border-[#f7bb7e] border-2 p-20 px-6 py-2 mt-4 font-bold text-white uppercase bg-black ">
             Contact
-          </button>
+          </motion.button>
           </div>
 
 
